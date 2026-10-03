@@ -1,0 +1,114 @@
+:root {
+  --fondo: #f7f6f2;
+  --superficie: #ffffff;
+  --texto: #1f2421;
+  --texto-suave: #5b625e;
+  --acento: #1f7a55;
+  --borde: #e2e0d8;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #141816;
+    --superficie: #1c211e;
+    --texto: #e8ebe9;
+    --texto-suave: #a3aba6;
+    --acento: #5cc795;
+    --borde: #2c332f;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.contenedor {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header {
+  border-bottom: 1px solid var(--borde);
+  background: var(--superficie);
+}
+
+header .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.marca {
+  font-weight: 650;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+nav a {
+  color: var(--texto-suave);
+  text-decoration: none;
+  margin-left: 20px;
+}
+nav a:first-child { margin-left: 0; }
+nav a:hover, nav a[aria-current="page"] { color: var(--acento); }
+
+main { padding: 48px 0 64px; }
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 40px 0 8px;
+  scroll-margin-top: 24px;
+}
+
+.bajada {
+  color: var(--texto-suave);
+  margin: 0 0 32px;
+}
+
+a { color: var(--acento); }
+
+ul { padding-left: 1.25em; }
+li { margin-bottom: 6px; }
+
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.tarjeta p:first-child { margin-top: 0; }
+.tarjeta p:last-child { margin-bottom: 0; }
+
+.ejemplo {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 0.92em;
+}
+
+footer {
+  border-top: 1px solid var(--borde);
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+footer .contenedor { padding-top: 20px; padding-bottom: 32px; }

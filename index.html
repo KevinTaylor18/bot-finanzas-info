@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bot de Finanzas</title>
+  <meta name="description" content="Proyecto personal para registrar ingresos y gastos por WhatsApp.">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a class="marca" href="./">Bot de Finanzas</a>
+      <nav>
+        <a href="./" aria-current="page">Inicio</a>
+        <a href="privacidad.html">Privacidad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor">
+      <h1>Registro de finanzas personales por WhatsApp</h1>
+      <p class="bajada">Un proyecto personal de Kevin Taylor.</p>
+
+      <p>
+        Bot de Finanzas es una herramienta de uso personal y de un único usuario.
+        Funciona como un asistente de WhatsApp: le escribo o le mando un audio contando
+        un ingreso o un gasto, y lo anota automáticamente en una planilla de cálculo
+        propia.
+      </p>
+
+      <div class="tarjeta">
+        <p><strong>Por ejemplo, le escribo:</strong></p>
+        <p class="ejemplo">gasté 15 lucas en el súper con débito</p>
+        <p><strong>Y responde:</strong></p>
+        <p class="ejemplo">✅ Anotado: Gasto $15.000 – Supermercado – Débito – 28/09/2026</p>
+      </div>
+
+      <h2>Cómo funciona</h2>
+      <ul>
+        <li>Los mensajes llegan a través de la API oficial de WhatsApp Business (Meta).</li>
+        <li>Un modelo de inteligencia artificial interpreta el mensaje y extrae fecha, tipo, monto, medio de pago y descripción.</li>
+        <li>Los audios se transcriben a texto y después se procesan igual que un mensaje escrito.</li>
+        <li>Cada movimiento se guarda como una fila en una planilla de Google Sheets de mi propiedad.</li>
+      </ul>
+
+      <p>
+        No es un servicio abierto al público: no se ofrece a terceros, no tiene fines
+        comerciales y solo procesa los mensajes del número de teléfono autorizado.
+      </p>
+
+      <h2>Privacidad y contacto</h2>
+      <p>
+        Podés consultar qué datos se procesan y cómo pedir su eliminación en la
+        <a href="privacidad.html">política de privacidad</a>.
+        Para cualquier consulta, escribí a
+        <a href="mailto:kevintaylor5818@gmail.com">kevintaylor5818@gmail.com</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contenedor">Bot de Finanzas · Proyecto personal de Kevin Taylor</div>
+  </footer>
+</body>
+</html>

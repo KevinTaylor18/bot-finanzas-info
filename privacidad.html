@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidad</title>
+  <meta name="description" content="Política de privacidad e instrucciones de eliminación de datos del Bot de Finanzas.">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a class="marca" href="./">Bot de Finanzas</a>
+      <nav>
+        <a href="./">Inicio</a>
+        <a href="privacidad.html" aria-current="page">Privacidad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor">
+      <h1>Política de privacidad</h1>
+      <p class="bajada">Última actualización: 3 de octubre de 2026</p>
+
+      <h2 id="responsable">1. Quién es el responsable</h2>
+      <p>
+        Bot de Finanzas es un proyecto personal de <strong>Kevin Taylor</strong>
+        (en adelante, “el responsable”). Contacto:
+        <a href="mailto:kevintaylor5818@gmail.com">kevintaylor5818@gmail.com</a>.
+      </p>
+
+      <h2 id="alcance">2. A quién se aplica</h2>
+      <p>
+        El bot es de uso personal y tiene un único usuario: el propio responsable.
+        Solo procesa los mensajes que llegan desde un número de teléfono autorizado.
+        Si otra persona le escribe al número del bot, su mensaje se descarta sin
+        interpretarlo ni guardarlo.
+      </p>
+
+      <h2 id="datos">3. Qué datos se procesan</h2>
+      <ul>
+        <li><strong>Número de teléfono</strong> del usuario, solo para verificar que el mensaje viene del número autorizado.</li>
+        <li><strong>Texto de los mensajes</strong> que el usuario le envía al bot.</li>
+        <li><strong>Mensajes de audio</strong>, que se convierten a texto.</li>
+        <li><strong>Movimientos registrados</strong>: fecha, tipo (ingreso o gasto), monto, medio de pago, descripción, mensaje original (texto o transcripción del audio) e identificador del mensaje de WhatsApp.</li>
+      </ul>
+      <p>Estos datos se usan con un único fin: registrar los movimientos en la planilla del usuario y confirmarle por WhatsApp lo que se anotó.</p>
+
+      <h2 id="servicios">4. Qué servicios intervienen</h2>
+      <ul>
+        <li><strong>WhatsApp (Meta):</strong> recibe y envía los mensajes a través de la API oficial de WhatsApp Business. <a href="https://www.whatsapp.com/legal/privacy-policy">Política de privacidad de WhatsApp</a>.</li>
+        <li><strong>Anthropic:</strong> su modelo de inteligencia artificial interpreta el texto del mensaje. <a href="https://www.anthropic.com/legal/privacy">Política de privacidad de Anthropic</a>.</li>
+        <li><strong>OpenAI:</strong> transcribe los mensajes de audio a texto. <a href="https://openai.com/policies/privacy-policy/">Política de privacidad de OpenAI</a>.</li>
+        <li><strong>Google Sheets:</strong> guarda los movimientos en una planilla del usuario. <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.</li>
+        <li><strong>Google Cloud:</strong> aloja el servidor del bot. <a href="https://cloud.google.com/terms/cloud-privacy-notice">Aviso de privacidad de Google Cloud</a>.</li>
+      </ul>
+      <p>
+        Los datos <strong>no se venden ni se comparten con terceros</strong> fuera de
+        estos servicios, y solo se les envía lo necesario para cumplir su función.
+      </p>
+
+      <h2 id="planilla">5. Acceso a la planilla</h2>
+      <p>
+        La planilla es una Google Sheet que está en el Google Drive del propio usuario.
+        El bot accede únicamente a esa planilla mediante una cuenta de servicio de Google
+        con permiso de editor, y no tiene acceso al resto del Drive. El usuario puede
+        quitarle el acceso en cualquier momento dejando de compartir la planilla con
+        esa cuenta.
+      </p>
+
+      <h2 id="conservacion">6. Cuánto tiempo se guardan los datos</h2>
+      <ul>
+        <li><strong>Movimientos y mensaje original</strong> (texto o transcripción del audio): se guardan en la planilla mientras se use el bot. El usuario puede borrarlos cuando quiera desde la planilla.</li>
+        <li><strong>Audios:</strong> no se guardan. Se transcriben y se descartan en el momento.</li>
+        <li><strong>Servidor:</strong> no guarda copias propias de los mensajes.</li>
+        <li><strong>Registros técnicos (logs) de Google Cloud:</strong> contienen solo datos técnicos (tipo de mensaje, identificador y si se procesó correctamente), sin el contenido de los mensajes. Se eliminan automáticamente a los 30 días.</li>
+        <li><strong>Meta (WhatsApp), Anthropic y OpenAI</strong> procesan los datos según sus propias políticas, enlazadas en la sección 4, y pueden conservarlos por un tiempo limitado.</li>
+      </ul>
+
+      <h2 id="eliminacion">7. Cómo pedir la eliminación de datos</h2>
+      <div class="tarjeta">
+        <p>Para eliminar los datos asociados al Bot de Finanzas:</p>
+        <ul>
+          <li><strong>Movimientos registrados:</strong> borrá las filas que quieras, o la planilla completa, directamente en Google Sheets.</li>
+          <li><strong>Acceso del bot:</strong> en Google Sheets, tocá “Compartir” y quitá a la cuenta de servicio del bot. Desde ese momento, el bot ya no puede leer ni escribir la planilla.</li>
+          <li><strong>Solicitud por email:</strong> escribí a <a href="mailto:kevintaylor5818@gmail.com?subject=Eliminaci%C3%B3n%20de%20datos%20-%20Bot%20de%20Finanzas">kevintaylor5818@gmail.com</a> con el asunto “Eliminación de datos – Bot de Finanzas” e indicá el número de teléfono desde el que escribiste. Los datos se eliminan y se confirma la eliminación por email dentro de los 30 días.</li>
+        </ul>
+        <p>Los datos que conservan Meta, Anthropic y OpenAI se rigen por sus propias políticas; cada una explica cómo ejercer tus derechos ante ellos.</p>
+      </div>
+
+      <h2 id="seguridad">8. Seguridad</h2>
+      <p>
+        Las claves de acceso a los servicios se guardan fuera del código y nunca se
+        publican. El bot solo procesa los mensajes que llegan desde el número de
+        teléfono autorizado.
+      </p>
+
+      <h2 id="cambios">9. Cambios en esta política</h2>
+      <p>
+        Si esta política cambia, se publicará la nueva versión en esta misma página con
+        la fecha de actualización correspondiente.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contenedor">Bot de Finanzas · Proyecto personal de Kevin Taylor · <a href="mailto:kevintaylor5818@gmail.com">kevintaylor5818@gmail.com</a></div>
+  </footer>
+</body>
+</html>
