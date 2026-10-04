@@ -72,6 +72,7 @@
       <h2 id="conservacion">6. Cuánto tiempo se guardan los datos</h2>
       <ul>
         <li><strong>Movimientos y mensaje original</strong> (texto o transcripción del audio): se guardan en la planilla mientras se use el bot. El usuario puede borrarlos cuando quiera desde la planilla.</li>
+        <li><strong>Mensajes incompletos:</strong> si a un mensaje le falta un dato, ese mensaje y la pregunta del bot se guardan temporalmente en una hoja oculta de la misma planilla, para poder completarlo con la respuesta del usuario. Dejan de usarse a los 10 minutos y se eliminan al procesar el siguiente mensaje del usuario que llegue después de ese plazo. Antes de eso se eliminan si el movimiento se completa, si se registra un movimiento nuevo, si se reemplazan por otra pregunta o si el usuario escribe “cancelar”.</li>
         <li><strong>Audios:</strong> no se guardan. Se transcriben y se descartan en el momento.</li>
         <li><strong>Servidor:</strong> no guarda copias propias de los mensajes.</li>
         <li><strong>Registros técnicos (logs) de Google Cloud:</strong> contienen solo datos técnicos (tipo de mensaje, identificador y si se procesó correctamente), sin el contenido de los mensajes. Se eliminan automáticamente a los 30 días.</li>
