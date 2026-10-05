@@ -21,7 +21,7 @@
   <main>
     <div class="contenedor">
       <h1>Política de privacidad</h1>
-      <p class="bajada">Última actualización: 4 de octubre de 2026</p>
+      <p class="bajada">Última actualización: 5 de octubre de 2026</p>
 
       <h2 id="responsable">1. Quién es el responsable</h2>
       <p>
@@ -92,8 +92,11 @@
 
       <h2 id="seguridad">8. Seguridad</h2>
       <p>
-        Las claves de acceso a los servicios se guardan fuera del código y nunca se
-        publican. El servidor verifica la firma digital de cada mensaje para comprobar
+        Las claves de acceso a los servicios (WhatsApp, Anthropic y OpenAI) se guardan
+        cifradas en Google Secret Manager, fuera del código, y nunca se publican. El
+        servidor funciona en Google Cloud Run con una identidad propia de Google, sin
+        archivos de clave, que solo tiene permiso para leer esas claves y la planilla del
+        usuario. El servidor verifica la firma digital de cada mensaje para comprobar
         que provenga realmente de WhatsApp, y rechaza sin procesar los que no la tienen
         o no coinciden. Además, el bot solo procesa los mensajes que llegan desde el
         número de teléfono autorizado.
