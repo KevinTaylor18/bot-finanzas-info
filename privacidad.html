@@ -21,7 +21,7 @@
   <main>
     <div class="contenedor">
       <h1>Política de privacidad</h1>
-      <p class="bajada">Última actualización: 5 de octubre de 2026</p>
+      <p class="bajada">Última actualización: 6 de octubre de 2026</p>
 
       <h2 id="responsable">1. Quién es el responsable</h2>
       <p>
@@ -45,12 +45,19 @@
         <li><strong>Mensajes de audio</strong>, que se convierten a texto.</li>
         <li><strong>Movimientos registrados</strong>: fecha, tipo (ingreso o gasto), monto, medio de pago, descripción, mensaje original (texto o transcripción del audio) e identificador del mensaje de WhatsApp.</li>
       </ul>
-      <p>Estos datos se usan con un único fin: registrar los movimientos en la planilla del usuario y confirmarle por WhatsApp lo que se anotó.</p>
+      <p>Estos datos se usan solo para dos fines: registrar los movimientos en la planilla del usuario y confirmarle por WhatsApp lo que se anotó, y responder las consultas que el propio usuario hace sobre sus movimientos (por ejemplo, cuánto gastó en un mes).</p>
+      <p>
+        Para responder una consulta, el bot lee la planilla y hace las cuentas en su propio
+        servidor, sin enviar los movimientos guardados a ningún servicio de inteligencia
+        artificial. El resultado (montos y, si se pide un listado, las descripciones y fechas
+        de los movimientos) se le envía al usuario por WhatsApp. Las consultas no modifican
+        la planilla.
+      </p>
 
       <h2 id="servicios">4. Qué servicios intervienen</h2>
       <ul>
-        <li><strong>WhatsApp (Meta):</strong> recibe y envía los mensajes a través de la API oficial de WhatsApp Business. <a href="https://www.whatsapp.com/legal/privacy-policy">Política de privacidad de WhatsApp</a>.</li>
-        <li><strong>Anthropic:</strong> su modelo de inteligencia artificial interpreta el texto del mensaje. <a href="https://www.anthropic.com/legal/privacy">Política de privacidad de Anthropic</a>.</li>
+        <li><strong>WhatsApp (Meta):</strong> recibe y envía los mensajes a través de la API oficial de WhatsApp Business, incluidas las confirmaciones y las respuestas a las consultas. <a href="https://www.whatsapp.com/legal/privacy-policy">Política de privacidad de WhatsApp</a>.</li>
+        <li><strong>Anthropic:</strong> su modelo de inteligencia artificial interpreta el texto del mensaje: extrae los datos de un movimiento o convierte una consulta en un filtro. Recibe solo el mensaje del usuario, nunca los movimientos guardados en la planilla. <a href="https://www.anthropic.com/legal/privacy">Política de privacidad de Anthropic</a>.</li>
         <li><strong>OpenAI:</strong> transcribe los mensajes de audio a texto. <a href="https://openai.com/policies/privacy-policy/">Política de privacidad de OpenAI</a>.</li>
         <li><strong>Google Sheets:</strong> guarda los movimientos en una planilla del usuario. <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.</li>
         <li><strong>Google Cloud:</strong> aloja el servidor del bot. <a href="https://cloud.google.com/terms/cloud-privacy-notice">Aviso de privacidad de Google Cloud</a>.</li>
